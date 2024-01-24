@@ -4,16 +4,29 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <title>Todo App</title>
   </head>
   <body class="bg-slate-300 container m-auto p-2">
 
-    <div class="bg-slate-600 w-[600px] m-auto p-2">
-      <h1 class="text-4xl text-white font-bold mb-4">Todos</h1>
+    <div class="bg-slate-600 sm:w-[600px] w-[100%] m-auto p-2">
 
 
+      <div class="flex justify-between items-center">
+        <h1 class="text-4xl text-white font-bold mb-4">Todos</h1>
+        <span class="material-symbols-outlined text-white text-5xl cursor-pointer" id="search">
+          search
+          </span>
+      </div>
+
+      <div id="create__container">
       <input type="text" id="todo__input" placeholder="Enter todo note" class="outline-0 px-2 py-1 rounded">
       <button id="add__todo" class="bg-green-500 text-white px-2 py-1 rounded">Add Todo</button>
+      </div>
+
+
+      <div class="hidden" id="search__container"></div>
 
       <div class="flex flex-col gap-2 mt-3" id="todo__container">
 
@@ -29,6 +42,9 @@
    
 
     </div>
+
+
+    <button class="off bg-red-600 mt-10 p-1 text-white hidden">Machine is off</button>
     
     <script type="module" src="/main.js"></script>
   </body>
